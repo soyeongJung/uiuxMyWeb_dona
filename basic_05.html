@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+/*  min-height 는 height에서는 최소값 지정인 부모인 body에서 글이 없는 경우 이기때문에 최소값높이를 지정해서 보일 수 있도록 한다.  */
+    #margin {width:auto; height:auto; min-height:20px; background-color:#dfe358; }
+   /* #margin div {}
+    .first {}
+    #margin .first {}
+    div#margin div {}
+    #margin div.first {}
+    div#margin div.first {} 다 사용이 가능한 방법*/
+    #margin div {width:200px; height:200px; }
+    /* 프로그램상에스는 넓이, 높이, 배경으로 순으로 하는 것이 더 낫다 하지만 상관없다. */
+    /* margin 은 바깥선으로 위 양옆 아래 가 모두 공간이 생기는 것 
+       첫번째는 위에를 같이 margin이 생겨서 같이 내려오게 된다.*/
+/*    margin. first에서 .first(지정된class)앞에 margin을 쓴 경우는 margin 의 자손으로만 쓰겠다는 표현이다. 그래서 같은 class의 이름인 경우에도 지정된 부모인 margin의 자손만 적용이 된다.  */
+    #margin .first{background-color:#9f1; margin:80px; border: 10px dotted #951 }
+/*    margin:50px(위 아래) 10px(좌 우) 에 공간 \
+    margin:0 auto;} 는 위 아래는 0값 좌 우는 auto로 길이 만큼 알아서 들어가게 되어 중간에만 할 수 있다. */
+    /* margin에서는 겹쳐지는 경우에는 높은 수치가 우선순위를 갖는다. */
+    #margin .second{background-color:#cf1; margin:50px 10px; border: 10px dotted #951 }
+/*    margin:50px(위) 10px(좌 우) 100px(아래) 에 공간*/
+    #margin .third{background-color:#4f1;margin:20px 50px 100px;border: 10px dotted #951}
+/*    margin:50px(위) 10px(우) 100px(아래) 40px(좌) 에 공간
+      margin-top/right/bottom/left로 나누어서 쓸수 있다.  ***padding도 동일하게 시계방향으로 위 우 아래 좌 순이다.*** */
+    #margin .fourth{background-color:#af1; margin: 10px 20px 30px 40px; border: 10px dotted #951 }
+  /* margin-top:10px;
+     margin-right:20px;
+     margin-bottom:30px;
+     margin-left:40px;} 이것이 정석*/
+    .more{background-color:#f34; margin: 10px; margin-right: 20px;}
+    /*    css는 나중에 쓰는 것이 우선 순위 이므로 margin-right: 20px; margin: 10px;} 으로 한다면 나중에 쓰것이 10px이므로 10px 로 설정 된다.*/
+    
+    #padding {width:auto; height:auto; /*min-height:50px;*/ background-color: #faa; float:left; margin-left: 10px;}
+/*    float란 위(공중으)로 띄우는 것 띄우므로써 부모(body)가 떨어지면서 자식도 같이 떨어지게 된다. 
+      부모는 사이즈가 0이다. 부모 사이즈가 0이 되면서  그래서 필요한것은 clearfix를 사용한다.
+      화면이 작은 경우에는 옆으로 가야되는 것이 그 아래로 내려가게 된다. */
+/*    padding이란 안쪽 여백 margin처럼 바깥쪽에 생기는 것. 패딩을 입는 것처럼 다른 사람이 볼때는 부피 있어 보이지만 실제로는 아닌것. margin은 공간을 만드는 것이고 padding은 본인의 부피를 늘리는것. */
+    #padding div {width:200px; height:200px; float: left}
+    #padding div>.box {width:100%; height:100%; background-color: #777; }
+/*  padding에서 넓이 높이를 100%로 주워도 부모인 div 넓이 높이 값이 200px임으로 100%는 200px이다.  */
+    #padding .first{background-color:#67d; padding:80px; border-top-right-radius:30%; border: 10px solid #951 }
+    #padding .second{background-color:#ecf; padding:20px 100px;border: 10px dotted #951 }
+    #padding .third{background-color:#acf; padding:10px 50px 100px; border: 10px dashed #951 }
+    #padding .fourth{background-color:#fda; padding:20px 50px 5px 100px; border: 10px double #951 }
+/*   padding:50px만큼 box-sizing을 하는 경우 
+      1. border-box는 정해진 크기의 안쪽으로 부피가 넣어지며
+      2. content-box는 정해진 크기의 바깥족으로 부피가 넣어진다.  */
+    #padding .more{background-color:#fff; padding:50px; box-sizing:border-box;
+  /*  -webkit-box-sizing:border-box
+         -moz-box-sizing:border-box
+          -ms-box-sizing:border-box
+           -o-box-sizing:border-box
+              box-sizing:border-box
+      */  }
+    
+  </style>
+</head>
+  
+<body>
+ <div id="margin">
+  <div class="first">first : margin one </div>
+  <div class="second">second : margin two </div>
+  <div class="third">third : margin three </div>
+  <div class="fourth">forth : margin four </div>
+  <div class="more">more box</div>
+ </div>
+ 
+ <div id="padding">
+   <div class="first"><div class="box">first : padding one</div></div>
+  <div class="second"><div class="box">second : padding two</div> </div>
+  <div class="third"><div class="box">third : padding three</div> </div>
+  <div class="fourth"><div class="box">forth : padding four</div> </div>
+  <div class="more"><div class="box">more box</div></div>
+<!--  shift + ctrl + A 를 누르고 .box 치면된다.  -->
+ </div>
+  
+<!--  script  -->
+  <script> 
+  
+  </script>
+</body>
+</html>

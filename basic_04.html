@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>web baice4</title>
+  <style>
+    /*  clearfix, marjin 떠있는 공간, padding, float, boder, outline, id=#, class=.*/
+    /* selector */
+    /* *css를 표기 할때에는 우선순위 법칙이 있다.
+        tag < . < # < 부모에서부터 < !important */
+    body {margin:0;} 
+    #test {background-color: #f0a;}
+    div {width:auto; height:auto; background-color: #acc}
+    .first {background: #fac;}
+    .second {background: #77a;}
+    /*ul{} 은 div안에 없기 때문에 적용해도 변화가 없다.*/
+    
+    /* *벤더 프리픽스(prefix)
+       * 현재 공식적인 버전으로 승인 되지않은 기능들을 실험적으로 사용할때 쓴느 기능
+       * 각 브라우저마다 사용이 되기도 하고 배제하기도 하는 기능
+       * 해당하는 제조회사나, 기본엔진등의 방식을 기점으로 앞,뒤에 '-'를 붙인후에 실험기능을 사용할대 쓴느 기법
+  
+         벤더기입x   : 공식적으로 승인나서 권고상태이면 사용 할 수 있는 기능
+         <5대 브라우저>
+         -webkit-   : safari, chrome
+         -moz-     : mozilla(fire fox)
+         -ms-       : microsoft
+         -o-        :opera
+    */
+    
+    h1{margin:0;}
+    
+    
+  </style>
+</head>
+<body>
+ <div class="first" id="test">
+  <!-- h1 가장 중요한 제목이며, 판 페이지단 한번 바껭 쓸수 없다. 대부분 로고로 사용한다. -->
+  <h1><a href="#"> 제목을 뜻하는 표기 </a></h1>
+  <h2> 제목을 뜻하는 표기 </h2>
+  <h3> 제목을 뜻하는 표기 </h3>
+  <h4> 제목을 뜻하는 표기 </h4>
+  <h5> 제목을 뜻하는 표기 </h5>
+  <h6> 제목을 뜻하는 표기 </h6>
+  <p><span>Lorem ipsum dolor sit</span> amet, consectetur adipisicing elit. <strong>Deleniti illum</strong>et blanditiis voluptas sint doloribus, deserunt sit laboriosam, nostrum fugit. Provident perspiciatis nesciunt, hic quis nemo, corporis deserunt quaerat est!</p>
+ </div>
+ <div class="second">
+    <ul>
+     <li> list </li>
+     <li> list </li>
+     <li> list </li>
+     <li> list </li>
+     <li> list </li>
+   </ul>
+   <ol>
+     <li> list_01 </li>
+     <li> list_02 </li>
+     <li> list_03 </li>
+     <li> list_04 </li>
+     <li> list_05 </li>
+     <li> list_06 </li>
+     <li> list_07
+       <ul>
+         <li> list </li>
+         <li> list </li>
+         <li> list </li>
+         <li> list </li>
+         <li> list </li>
+       </ul>
+     </li>
+   </ol>
+   <dl>
+     <dt> 내용제목 </dt>
+     <dd> 내용 </dd>
+     <dd> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum sed dolore atque dolor alias modi similique accusamus earum expedita delectus laudantium dicta aliquid, mollitia fugiat ad libero? Quaerat sapiente, consectetur.</dd>
+   </dl>
+ </div> 
+   
+  
+   
+    <!--  script  -->
+  <script>
+  
+  </script>
+</body>
+</html>
