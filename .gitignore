@@ -1,0 +1,8 @@
+# 그래픽 파일전송 금지
+**/*.psd
+**/*.ai
+**/*.esp
+
+# node_modules 폴더
+**/node_modules
+
