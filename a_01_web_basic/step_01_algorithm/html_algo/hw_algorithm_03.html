@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hw_algorithm_03</title>
+</head>
+<body>
+ 
+  <!--  script  -->
+  <script>
+    // 함수 선언에서는 변수와 구별을 위해 대문자로 쓴다 (First), 자체적인 함수이기 때문에 함수 외부에서는 영향을 안준다. 함수는 구분을 해주기 위한것. 똑같은 것을 매번 반복하기 어렵기 때문에 사용.
+  function Firsttest(i,j,k,m){
+      var fish = i;
+      var day = j;
+      var cat = 0;
+      var before = j-1; // day에서 오늘 날짜부터 센다고 한 경우 오늘이 3일차인 경우 2를 빼야되므로 day(오늘 일차)-1을 하면 되므로 j-1이 된다.
+    
+      for(; day>=0; day+=1){
+        if(day % k == 0){
+          cat++; fish--;
+          // 검증
+        console.log ('고양이가 먹은 고등어:' + cat, '남은 고등어:' + fish, '고등어 먹은날:'+day);}
+        if(fish==0){
+          // console.log('고양이가 고등어를 다 먹었어요!'); 
+          break;}
+      }
+        //if(day-=2){console.log ('고양이가 고등어를 다 먹은 날짜:'+day);}
+
+
+        console.log('총 소요된 날짜:' + day);
+
+        //최초날짜가 3일부터 였으니 해당하는 날짜부터
+        
+        day-=before;
+        console.log('해당일부터:' + day + '소요');}
+    
+  //  Firsttest(24,3,11); // Firsttest(날짜, 물고기수, 간격, 주려는 물고기양);
+
+   // Firsttest(3,32,5,0.5);
+    
+    function Second(){
+      var fish = 32, day = 3, turm=5, cat=0;
+    
+    day = 1; // 처음 값에서 중간에 값을 변경하겠다는 재설정
+      
+      for(;day>=0; day++){
+        if(day % turm ==0){
+          fish -= 0.5;
+          cat += 0.5;
+          console.log('고양이가 먹은 물고기수:'+cat, '남은 물고기수:'+fish, '소요된 날짜:'+day);
+        } // if
+        if(fish == 0){
+          break;
+        } // if
+      } // for
+    
+     day+=2; // 오늘은 3일차 이지만 고등어를 모두 소비한 날짜를 구하기 때문에 2를 더한다.
+    
+      console.log('총 소요된 날짜:'+day); // 아예 for문 이후에 쓴다.
+    } // Second
+    
+    Second();
+    
+  
+    
+      
+  </script>
+</body>
+</html>

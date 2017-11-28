@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hw_algorithm_01</title>
+</head>
+<body>
+ 
+  <!--  script  -->
+  <script>
+    // 함수 선언에서는 변수와 구별을 위해 대문자로 쓴다 (First), 자체적인 함수이기 때문에 함수 외부에서는 영향을 안준다. 함수는 구분을 해주기 위한것. 똑같은 것을 매번 반복하기 어렵기 때문에 사용.
+  function First ( ){
+      var fish = 24;
+      var day = 3;
+      var cat = 0;
+
+      for(; day>=0; day+=1){
+        if(day%10==0){
+          cat++; fish--;
+          // 검증
+        console.log ('고양이가 먹은 고등어:' + cat, '남은 고등어:' + fish, '고등어 먹은날:'+day);}
+        if(fish==0){
+          // console.log('고양이가 고등어를 다 먹었어요!'); 
+          break;}
+      }
+        //if(day-=2){console.log ('고양이가 고등어를 다 먹은 날짜:'+day);}
+
+
+        console.log('총 소요된 날짜:' + day);
+
+        //최초날짜가 3일부터 였으니 해당하는 날짜부터
+        day-=2;
+        console.log('해당일부터:' + day + '소요');}
+    
+    First();
+  
+      
+  </script>
+</body>
+</html>

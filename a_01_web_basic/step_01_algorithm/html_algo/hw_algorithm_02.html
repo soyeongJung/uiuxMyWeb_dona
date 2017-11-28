@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hw_algorithm_02</title>
+</head>
+<body>
+ 
+  <!--  script  -->
+  <script>
+    // 함수 선언에서는 변수와 구별을 위해 대문자로 쓴다 (First)
+  function First (){
+      var fish = 32;
+      var day = 3;
+      var cat = 0;
+      for(; day>=0; day+=1){
+        if(day%5==0){
+          cat+=0.5; fish-=0.5;
+        console.log ('고양이가 먹은 고등어:'+cat, '남은 고등어:'+fish, '고등어먹은날:'+day);} // if
+        if(fish==0){
+         // console.log('고양이가 캔을 다 먹었어요!'); 
+          break;} // if
+      } // for
+        console.log ('총 소요된 날짜:'+day);}
+    
+    First();
+    
+         
+      
+  </script>
+</body>
+</html>
+  
+      
+  </script>
+</body>
+</html>

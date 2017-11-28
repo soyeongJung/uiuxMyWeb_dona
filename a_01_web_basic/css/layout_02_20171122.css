@@ -1,0 +1,78 @@
+/* layout_02_20171122.css */
+@charset "utf-8";
+
+/* reset css */
+html, body{margin: 0; padding: 0; color: #333}
+h1,h2,h3,h4,h5,h6,
+p,pre,div{margin: 0; padding: 0;}
+ul, ol, li, dl,dt,dd{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none; color: #f0a;}
+a:hover{text-decoration: underline ; font-weight: bold;}
+img{border:0;}
+
+header, section, footer, aside, article, nav, main, figure {display: block;}
+
+
+/* commen */
+.clearfix:after{content:" "; display: block; clear :both;}
+.clearfix::after{content:" "; display: block; width:100%; height:0; clear :both;}
+
+.hidden{width: 0; height: 0; overflow: hidden;}
+
+
+/* design */
+
+body{background-color: #111}
+#box{width: 700px; height: auto; /*min-height:100px;*/ margin: 0 auto;}
+/* min-height:100px;는 높이값을 안주워서 최소한의 높이값 지정
+   max-height:100px;는 지정된 높이 값이상 안늘어난다.*/
+
+  /* headBox ----------------------------------------------------- */
+#headBox{width:100%; height: 80px; background-color: #4aa; padding: 15px 50px; box-sizing: border-box;}
+  h1{width: 100px; height: 50px; background-color: #fff; float: left;}
+   #gnb{width:450px; height:30px; float: right; margin-top:20px;}
+     #gnb>ul{width:100%; height:100%;}
+       #gnb>ul>li{width: 100px; height: 100%; background-color: #fff; color: #000; float: left; margin-right: 10px;}
+       #gnb>ul>li.last{margin-right:0;}
+
+  /* bannerBox ----------------------------------------------------- */
+#bannerBox{width: 100%; height: 250px; background-color: #fa0; }
+
+  /* sideBox ----------------------------------------------------- */
+#sideBox{width:100% ;height: 35px; background-color: #06f; }
+
+  /* contentBox ----------------------------------------------------- */
+#contentBox{width:100% ;height: auto; }
+  #news{width:50% ;height:300px; background-color:#f77; float:left;}
+    #news>ul{width:100%; height:100%; background-color:#333;}
+
+/* 내가쓴 답... */
+     /* #news>ul>li{width:50%; height:120px; background-color:#fff; margin:5px ; box-sizing:border-box; float:left;}
+      #news>ul>li.last{margin-bottom:0;}*/
+
+/* type_01; */
+      #news>ul>li{width:50%; height:50%; background-color:#fff; padding:10px ; box-sizing:border-box; float:left;}
+
+      #news>ul>li>a{display: block; width:100%; height:100%; background-color:#ccc;}
+
+
+/* type_02; */
+/* 
+  #news>ul>li{width: cals(50% - 10px); height:50%; background-color:#fff; margin:5px; float:left;}
+    #news li.news_01{margin-top:0; margin-left:0;}
+    #news li.news_02{margin-top:0; margin-left:0;}
+    #news li.news_03{margin-bottom:0; margin-right:0;}
+    #news li.news_04{margin-bottom:0; margin-right:0;}
+*/
+
+
+
+  #info{width:50% ;height:300px; background-color:#77f; float:left; 
+        padding:15px; box-sizing: border-box;}
+    #info>ul{width:100%; height: 100% ;}
+      #info>ul>li{width: 100%; height: 30% ; background-color:#fff ; margin-bottom:10px;}
+      #info>ul>li.last{margin-bottom:0;}
+
+
+/* footBox ----------------------------------------------------- */
+#footBox {width:100% ;height: 80px; background-color: #f60; }

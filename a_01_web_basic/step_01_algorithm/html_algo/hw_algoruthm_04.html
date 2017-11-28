@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hw_algorithm_04</title>
+</head>
+<body>
+ 
+  <!--  script  -->
+  
+  <script>
+  function first(){
+      
+      for(var i = 2; i < 10; i++){
+          for(var j = 1; j < 10; j++){
+             // alert(i + " x " + j + " = " + i * j);
+            console.log(i + ' x ' + j + ' = ' + i * j);
+          }
+      }
+  };
+  //  first();
+    
+    
+//검증을 하는 방법. 결과를 확인 하는 방법.    
+    // document.write();
+    document.write('글씨를 화면에 나오게 만드는 기능');
+    document.write('<h1>제목을 직접 입력 가능</h1>');
+    // 브라우저로 넘어 오면서 '(따옴표)가 사라지면서 h1태그로 인식된다.
+    
+    
+    // alert();
+    // 미리 만들어져 있는 함수
+//    alert('메세지 창을 띄우는 기능');
+//    alert('메세지 창을 띄우는 기능2');
+//    alert('메세지 창을 띄우는 기능3');
+//    alert('메세지 창을 띄우는 기능4');
+    
+    // prompt();
+//    var test = prompt('값을 입력하세요');
+//    document.write('test의 값은' + test + '입니다.');
+    // 입력하는 alert창 입력하면 입력한 값이 test에 들어간다.
+    
+    var yourName = prompt('성함을 작성하세요.');
+    var yourGender = confirm('남성이 맞나요?');
+    // confirm 맞아요(true/yes)? 아니예요(false/no)? 확인 하는것
+    
+    // (!yourGender){ 이나 (yourGender != true) 은 true에 반대로 부정을 말한다. 하지만 (!!yourGender){ 이나 yourGender == true){ 을 쓰는 경우 다시 긍정이 되어 true에 동의한다.  JS만의 고유기능!!!!
+    if(!yourGender == true){
+      document.write(yourName+'님, 당신은 남성이군요!');
+    } else {
+      document.write(yourName+'님, 당신은 남성이 아니신군요!');
+    }
+    
+    // console.log();
+//   function F(i){
+//      console.log(i);
+//    }
+//    F();
+    
+    // 3단 구구단 만들기
+//    var k = prompt('숫자를 입력하세요')
+//    for(var i = 1; i<10; i++){
+//      console.log( k+ ' x '+ i + ' = ' + k * i);
+//    }
+    
+//    for(var i = 1; i<10; i++){
+//      console.log( 2+ ' x '+ i + ' = ' + 2 * i);
+//    }
+    
+    
+    for(var k = 2; k < 10; k++){
+      for(var i = 1; i < 10; i++){
+        console.log( k + ' x '+ i + ' = ' + k * i);
+      } // for in
+    } //for out
+    
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* layout_02_20171121.css */
+@charset "utf-8";
+
+/* reset css - 초기설정 */
+/* *{margin: 0; padding: 0;
+  border: 0; outline: 0;} * 모양은 모두라는 표현이라서 컴퓨터가 느려짐 */
+html, body{margin; 0; padding: 0; color: #333} /* 웹상에서는 회색으로 거의 기준을 둔다. */
+h1,h2,h3,h4,h5,h6,
+p,pre,div{margin:0; padding:0;}
+ul,ol,li,dl,dt,dd{margin:0;padding:0; list-style:none;} /* list-style: 불립 기호가 없다. */
+a{text-decoration:none; color:#f0a;} /* 링크에 대한 설정 */
+a:hover{text-decoration:underline; font-weight: bold;} /* 마우스 오버시 테스트에 밑줄 및 굵게  */
+img{border:0;} /* border:0; = boder:none; 같은말 */
+
+header, section, footer, aside, article, nav, main, figure {display:block;} /* 익스에서는 호환이 안되므로 강제로 선언 해주는것 */
+
+/*  
+header : 웹페이지의 상단에 위치 전체의 내용을 총괄하는 영역
+section : 본문내용을 뜻하며, 작은 웹페이지의 영역 
+(내부에는 다시 header, footer, section, aeticle...)
+footer : 웹페이지의 가장 하단에 위치(꼭 그렇지는 않다.), 웹페이지의 정보(회사정보, 주소)를 담는곳
+aside : 있으면 좋고, 없어도 크게 불편하지 않는 영역, 있어도 없어도되는 영역
+article : 본문의 내용을 뜻하며, section과 유사하지만 좀더 깊은 의미를 지닌 내용을 담을때 (내부에는 다시 header, footer, section, aeticle...) 사용가능
+nav : 네비게이션의 약자로 주로 메뮤 영역을 사용할때 쓰는 영역
+main : 전체를 뜻하는 의미의 코드, 현재는 아직 많이 사용 하지 않는다.
+figure : img코드를 감쌀때 쓰는 영역(img 담는 태그), figcaption(이미지 설명)코드와 함께 사용 한다.
+template : html 문서를 분리해서 사용할때 쓰는 코드(기본문에서는 사용하지 않음)  
+*/
+
+
+/* common */
+.clearfix:after {content:" "; display: block; clear: both;} 
+/* IE하위 버전에는 ::를 인식 못하므로 한번 거 써준다. */
+.clearfix::after{content:" "; display: block; clear: both;} /* 오페라 규정으로 "" 사이가 떨어져야되므로 " "이렇게 한다. */
+
+  
+/* design */
+body{background-color: #111}
+#box{width: 600px; height: auto; margin: 50px auto; margin: 3.125rem auto;}
+/* 50px / 16px = 3.125em (1rem = 16px) */
+/* 꼭! px을 먼저 쓰고 그 다음에 다른 단위를 쓴다. */
+
+/* headBox---------------------------- */
+#headBox{width: 100%; height: 100px; background-color:#1af;}
+
+/* contentBox------------------------- */
+#contentBox{width: 100%; height: auto;}
+  #sideArea{width: 30%; 
+           /* width:calc(100% / 3);*/
+            height: 300px; float: left; 
+            background-color:#fa0;}
+  #contentArea{width: 70%;
+              /* width:calc(100% / 3);*/
+               height: 150px; float: left; 
+               background-color:#af0;}
+  #viewArea{width: 70%; 
+          /*width:calc(100% / 3);*/
+          height: 150px; float:left;
+          background-color:#faf;}
+/* 소수점 자리는 약 6째 자리까지 계산을 해야지 정확하다. vw단위를 ㅆ는 경우 소수점은 6자리까지 써야된다. */
+/* width:cala(100% / 3) 은 반드시 띄어쓰기를 해야되며 이 기능은 IE하위 버전에서는 호환도지 않으므로 주의해야된다. */
+
+/* footBox------------------------- */
+#footBox{width: 100%; height: 100px; background-color:#a51;}
+
+
+/*,(콤마)로 A도 B도라는 의미다.*/

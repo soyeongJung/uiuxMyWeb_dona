@@ -1,0 +1,108 @@
+/* test_layout_02_20171123.css */
+@charset "utf-8"
+
+/* reset css */
+html, body{margin:0; padding:0; color: #333;}
+h1,h2,h3,h4,h5,h6
+p,pre,div{margin:0; padding:0;}
+ul,ol,li,dl,dt,dd{margin: 0; padding: 0 ; list-style:none;}
+a{text-decoration: none; color:#f0a;}
+a:hover{text-decoration: underline; font-weight:bold;}
+img{border:0;}
+
+header, section, footer, aside, article, nav, main, figure{display:block;}
+
+
+
+/* commen */
+.clearfix:after{content:" ";display: block; clear:both;}
+.clearfix::after{content:" ";display: block; clear:both;}
+
+.hidden{width:0; height:0; overflow:hidden;}
+
+
+
+
+/* design */
+body{background-color: #ccc;}
+
+#wrap{width:978px; height:1740px; background-color:#adadad; margin: 0 auto;}
+
+/* #headBox ========================= */
+#headBox{width:978px ; height:150px ; background-color: #ad3; padding:10px; box-sizing: border-box;margin-bottom: 20px;}
+h1{width:125px; height:125px; background-color:#fff;float:left;margin-right:10px;}
+ /* #logBox */
+#logBox{width:100px; height:40px; float:right;}
+.log_in{width:40px; height:40px; background-color: #3af;margin-right:15px; float:left;}
+.log_out{width:40px; height:40px;background-color: #fa3;float:left; margin-right:0;}
+
+#gnb{width:650px;height:60px;background-color:#ac1;float:left;margin-top:35px; padding:17px 50px;box-sizing: border-box;}
+#gnb>ul{width:100%; height:100%;}
+#gnb>ul>li{width:80px;height:30px; background-color:#fee; float:left; margin-right:75px;}
+#gnb>ul>li.last{margin:0;}
+/* // #headBox ========================== */
+
+
+/* #newarrivalBox ========================== */
+#newarrivalBox{width:978px ; height:200px ; background-color: #f35; margin-bottom: 20px;}
+
+#newList{width:978px; height:150px;padding:25px 20px; box-sizing: border-box;}
+#newList>li{width:150px; height:150px; 
+            background-color:#fff;float:left;
+            margin-right:47px;}
+#newList>li.last{margin: 0;}
+/* // #newarrivalBox ========================== */
+
+
+/* #catagoryBox ========================== */
+#catagoryBox{width: 978px; height:300px ; margin-bottom: 20px;}
+#menuBox{width:175px;height:300px;background-color:#ddd; float:left;}
+#menuBox .menu_01{width:100px;height:100px; background-color:#afe ;margin:35px;}
+
+#menulistBox{width:803px;height:300px; background-color: #fa2; float:right; padding:7px 110px; box-sizing: border-box;}
+#menulistBox>.menu_list{width:100%; height:100%;}
+
+#menulistBox>.menu_list>.menu_listtop>li{width:140px; height:140px; background-color:#fff; float:left; margin-right:50px;
+margin-bottom: 5px;}
+
+#menulistBox>.menu_list>.menu_listtop>.menu_listbottom>li{width:140px; height:140px; background-color:#fff; float:left; margin-right:50px;}
+
+/* // #catagoryBox ========================== */
+
+
+/* #itemlistBox ========================== */
+#itemlistBox{width:978px ; height:140px ; background-color: #a5f;margin-bottom: 20px;}
+/* // #itemlistBox ========================== */
+
+
+/* #productBox ========================== */
+#productBox{width:978px ; height:700px ; background-color:#f28;margin-bottom: 20px;}
+/* // #productBox ========================== */
+
+
+/* #footBox ========================== */
+#footBox{width:978px ; height:150px ; background-color:#6fa ;}
+/* // #footBox ========================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

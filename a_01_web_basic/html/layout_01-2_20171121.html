@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--  layout_01-2_20171121.html  -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../css/layout_01-2_20171121.css">
+  
+  <!-- 조건절 IE 9버전 이하만 구동이 되라는 조건절이다. -->
+  <!--[if lte IE 6]>
+  <script src="https://unpage.com/html5shiv"></script> 
+  <![endif]-->
+  
+    
+  <title>layout_01-2</title>
+</head>
+<body>
+  <div id="box">  <!-- box --> 
+    <!--<header> </header>
+    <section> </section>
+    <footer> </footer>--> <!-- header, section, footer은 익스에서 호환이 안되므로 추가로 css에 명령어 필요 -->
+    <header id="headBox">
+      <h1>logo</h1>
+      <nav id="globalNavArea">
+       <h2 class="hidden">global navigation area</h2>
+        <ul>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li class="last">06</li>
+        </ul>
+      </nav>
+    </header>
+    <!-- // #headBox -->
+    
+    <section id="contentBox" class="clearfix"><!--contentBox-->
+     <h2 class="hidden">웹페이지 본문내용</h2>
+      <article id="contentArea">
+        <h3 class="hidden">article</h3>
+      </article> 
+      <article id="viewArea">
+        <h3 class="hidden">viewArea</h3>
+      </article>      
+      <aside id="sideArea">
+        <h3 class="hidden">aside</h3>
+      </aside> 
+      <!-- // #sideArea -->
+      <!--<container> </container>-->
+      <!-- html5에서는 태그를 마음대로 써도된다. 하지만 IE에서는 인식이 안되어 호환되자않는다. -->
+      <!-- // #contentArea -->
+    <!-- section 태그 안에는 작은 header, footer를 쓸수 있다.
+    article : div대신 쓰는것 본문(의 핵심)/내용영역 
+    p : 글자 -->
+    </section><!-- // #cotentBox -->
+    
+    <footer id="footBox">
+      <h2 class="hidden">footBox</h2>
+    </footer><!-- // #footBox -->
+    
+  </div> <!-- // #box -->
+  
+  
+  <!--  script  -->
+  <script>
+  
+  </script>
+</body>
+</html>
+
+
+<!-- 해당하는 목차의 항목을 담아라. 보이지 않는 한목에 대해서는 숨겨라. -->

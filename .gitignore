@@ -2,6 +2,7 @@
 **/*.psd
 **/*.ai
 **/*.esp
+**/*.config
 
 # node_modules 폴더
 **/node_modules

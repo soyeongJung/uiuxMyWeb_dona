@@ -1,0 +1,234 @@
+/* position_01_20171124.css */
+@charset "utf-8";
+
+/* reset.css */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+buttom,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+label,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+tr,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 3px solid #fa0;
+    outline-offset: 5px;
+}
+/* 포커스 : 브라우저에서 키보드에 탭(TAP) 눌렀을때 내 위치 표시 및 이동되는것 offset은 공중에 띄었을때 */
+
+/* common */
+
+/* design.css */
+
+body {
+    height: 200rem;
+}
+
+h1 {
+    padding: 1rem;
+    background-color: #0af;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'myriad pro',nanumGothic, dotum, sens-serif;
+    box-shadow: 0 0.2em 0.2em rgba(0,0,0,0.3);
+    margin-bottom: 0.5em;
+}
+/* text-transform:uppercase : 대문자 */
+
+#wrap {
+    width: 1200px;
+    height: auto;
+    background-color: #ccc;
+    margin: 0 auto;
+    border: 3px solid #333;
+    position: absolute;
+}
+/* 부모의 값에 position을 주는 것에 따라서 자식들에게도 다르게 영향을 준다. */
+#wrap > div {
+    width: 200px;
+    height: auto;
+    float: left;
+    border: 2px solid #07f;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+#wrap > div:hover {
+    background-color: #f06;
+    transition: all 0.8s;
+    color: #fff;
+}
+
+#wrap:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.not {
+    background-color: #fa0;
+}
+.static {
+    background-color: #af8;
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+/* static은 보잘것없다. (아무 영향이 없다.) relative를 완전히 나렬 버릴 수 있다. */
+
+/* .fixed{background-color:#9ac; position:fixed; top:-100px; right:50px; z-index:-100;}  */
+/* fixed를 쓰는 순간 앞에있던 순서 위로 온다.
+  (쇼핑몰에서 최근에 본 상품 처럼 스크롤을 해도
+   따라오는것) 그 아래 있던것은 바로 그 아래 존재 
+   기본적으로 z-index(0)이지만 마이너스를 주는 순간 부터는 클릭/마우스오버 불가.
+   (위에 막이 생기는것 같음) z-index는 평균적으로 100단위또는 1000단위로 쓴다. */
+/* top:0px; left:50px; margin-left:-100px 은 한 가운데에 fixed를 놓는다. */
+
+.fixed {
+    background-color: #9ac;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.absolute {
+    background-color: #cca;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    z-index: 200;
+}
+/* absolute는 스롤 시 고정기능 없음
+  fixed보다 z-index를 더 많이 주면 앞으로 오게 된다.  */
+.relative {
+    background-color: #ac1;
+    position: relative;
+    top: 100px;
+    left: -50px;
+    z-index: 300;
+}
+/* 기본인 자기 자신의 위치이동한다.
+   자기 자신의 자리의 흔적을 남겨 다른게 들어오지 못한다. 
+   오로지 시각적인기능에서만 사용가능하며 margin-left를주는경우는 그 옆에 있던것상자도 margin값까지 밀리면서 영향*/
+
+/* position
+
+* position : static(기본상태) | fixed(아무데나 배치가능) | absolute | relative;
+* ststic을 제외한 나머지는: top, left, right, bottom, z-index 가능
+* z-index는 1의 숫자로 판당할 수도 있지만, 100단위로 처리하는 경우가 많다.
+* z-index는 단위가 존재하지 않음, -(마이너스)값도 사용할 수 있다. (앞 뒤 위치 확인가능)
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
