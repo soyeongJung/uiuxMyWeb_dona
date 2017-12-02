@@ -81,8 +81,11 @@ ul,ol,li{list-style:none;}
 a{text-decoration:none; color:#777;}
 a:hover, a:active{text-decoration:underline; color:#f09;}
 
+<<<<<<< HEAD
 button{cursor:pointer;}
 
+=======
+>>>>>>> cfa7173fc49a6336f54e0bbab0f930e9d141ff93
 /* =================================================================== */
 header, nav, article, section, footer, aside, main, figure, figcaption{
     display:block; color:inherit;

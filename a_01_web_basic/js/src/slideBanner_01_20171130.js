@@ -1,5 +1,6 @@
 // slideBanner_01_20171130.js
 
+<<<<<<< HEAD
 // 즉시 실행 함수 (IIFE)
 (function($){
 // jQuery
@@ -45,3 +46,8 @@ var Fun = finction (){};   ==> 불가능
 (function(){}());
 
 */
+=======
+(function($){
+
+})(this.jQuery);
+>>>>>>> cfa7173fc49a6336f54e0bbab0f930e9d141ff93

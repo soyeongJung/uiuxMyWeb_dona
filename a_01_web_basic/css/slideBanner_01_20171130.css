@@ -82,6 +82,7 @@ overflow:visible은 넘치는 것을 보여줘라 하지만 여기에서는 widt
 
 .box_02>ul>li:nth-child(8){white-space:nowrap; overflow:hidden; text-overflow:ellipsis;} /* 게시판 */
 /* .box_02>ul>li:nth-child(9){word-wrap:break-word; overflow:hidden; text-overflow:ellipsis;} */  /* 작동안되서 확인 필요 */
+<<<<<<< HEAD
 /* text-overflow:ellipsis;는 글자가 넘치는 경우 점점점(...)으로 처리해라. */
 
 
@@ -105,3 +106,6 @@ font-size:3rem;}
 .banner>ul>li:nth-child(3){background-color:#a87;}
 .banner>ul>li:nth-child(4){background-color:#c3c;}
 .banner>ul>li:nth-child(5){background-color:#fcc;} 
+=======
+/* text-overflow:ellipsis;는 글자가 넘치는 경우 점점점(...)으로 처리해라. */
+>>>>>>> cfa7173fc49a6336f54e0bbab0f930e9d141ff93
