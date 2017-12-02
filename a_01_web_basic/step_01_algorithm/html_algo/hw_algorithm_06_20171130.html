@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <style>
+     
+           
+    </style>
+    <title>    </title>
+</head>
+<body>
+  
+ 
+  <!--  script  -->
+  <script>
+    
+function First(){
+   var i=6, j=10, k=0;
+
+   for(;k<=j;k++){
+       if(i%k==0&&j%k==0){
+           console.log(k);
+       } // if
+   }  // for
+}  // First()
+//   First();
+
+function a(){         //선언되어 변경이 안된다.
+var num = function (a,b){   // 변수 변경이 가능하다.
+   var i=a, j=b, k=0;
+
+   for(;k<=j;k++){
+       if(i%k==0&&j%k==0){
+           console.log(k);
+       } // if
+   }  // for
+};  // num
+num(10,30);
+}; // a 
+//a();
+
+
+ 
+ // var test = {a:num, b:'c'};
+
+var myNumber = function(a,b){
+    var i=a, j=b, k=0, l;
+    var arr = []; // 배열
+
+    // l의 변수를 통해서 큰 숫자를 판단!
+    if(i > j){
+        l=i;
+    }else{
+        l=j;
+    }
+    console.log('입력숫자중 큰숫자는 : '+l);
+
+    for(;k<=l;k++){
+       if(i%k==0 && j%k==0){
+           arr.push(k); // 추가 된것을 계속 넣는것.
+       } // if
+   }  // for
+           console.log(arr); // 완전히 끝나고 나서 이기 때문에 for문이 끝나고 해야된다.
+
+}; // myNumber
+
+myNumber (100,100);
+
+//var arr=[1,5,10,'afd'];  // arr 안에는 1,5,10,'afd' 가 있다.
+//console.log(arr[0]); // 은 1을 호출 한다. 만약 [1]을 입력한다면 5를 호출한다.(JS는 숫자가 0부터 시작 되기 때문)
+
+
+// hw_20171203 숫자 세개 약수 구하기
+
+var hwmyNunber = function(a,b,c){
+    var j=a, s=b, y=c, g=0, o;
+    var arr = [];
+    
+    if(j >= s){
+        o=j;
+    }else if(s >= y){
+        o=s;
+    }else if(y >= j){
+        o=y;
+    }else if(j >= y){
+        o=j;
+    }else if(y >= s){
+        o=y;
+    }else if(s >= j){
+        o=s;
+    }
+    console.log ('입력한 숫자중 큰 숫자는 ' + o);
+
+    for(;g<=o;g++){
+        if(j%g==0 && s%g==0 && y%g==00){
+            arr.push(g)
+        } // if
+    } // for
+     console.log(arr);
+} // hwmyNunber
+
+hwmyNunber (100,100,100);
+
+
+   </script>
+</body>
+</html>

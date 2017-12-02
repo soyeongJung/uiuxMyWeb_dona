@@ -10,8 +10,8 @@ a:hover{text-decoration:underline; color:#f27}
 
 
 /* common.css */
-.clearfix:after{content:" "; dispaly:block; clear:both;}
-.clearfix::after{content:" "; dispaly:block; clear:both;}
+.clearfix:after{content:" "; display:block; clear:both;}
+.clearfix::after{content:" "; display:block; clear:both;}
 
 #wrap .last{margin-right:0; border-right:0;}
 #wrap .first{margin-left:0; border-left:0;}
@@ -27,7 +27,7 @@ a:focus{outline: 3px solid #fa0; outline-offset:3px;}
 #wrap{width:auto; min-width:960px; height:auto; margin:0 auto; /*background-color:#ccc;*/}
 /* width:auto; min-width:960px 으로 하는경우 넓이를 최소 960px로 잡고 pc기반으로 옆으로 늘어 날수 있다. */
 #headBox{width:100%; height:300px; background-color:#aaa; padding: 1rem; box-sizing: border-box;}
-    #headBox > h1{width:100px; height: 150px; float:left; background-color:#f27;}
+    #headBox > h1{width:100px; height: 150px; float:left; background-color:#f27; cursor:pointer;}
     #gnb{width:600px; height:100px; float:right; margin-top:50px;}
     #gnb ul{width: 100%; height:100%;}
     #gnb ul>li{width:100px; height:100%; float:left; margin-left:20px; background-color:#637;}
@@ -63,7 +63,24 @@ a:focus{outline: 3px solid #fa0; outline-offset:3px;}
 /* position:fixed; top:50%; left:50%; z-index:500; 를 주면 팝업창의 처음 시작을 기준으로 해서 처음시작 부분 박스가
 가운데로 온다.  position은 한개만 사용 가능!!*/
 #popupBox>button{padding:0.4rem; background-color:#f77;
-   position:absolute; right:-20px;top:-20px;border:0;}
-#popupBox>button:focus,
+   position:absolute; right:-20px;top:-20px;border:0; cursor:pointer;}
+
+#popupBox>button:focus
 #popupBox>button:hover{background-color:#fa0;}
 #popupBox>p{font-size:1.2rem; color:#333; font-family:"myriad pro";}
+
+/* .top_btn */
+#contentBox{position:relative;}
+/* position:absolute; bottom:0; right:0; padding:1rem; background-color:#0af; color:#fff; font-weight:bold;}.top_btn{ */
+.top_btn{width:100px; height:100px; width:6.25rem; height:6.25rem; 
+    position:fixed; bottom:1rem; left:50%; margin-left:31rem; padding:1rem; 
+    /* contentBox 사이즈는 960px (60rem) 임으로 left 50%은 contentBox(기준)에서 
+    .top_btn 상자 왼쪽 기준으로 50% 가고 margin-left:30rem으로 가면 맨 끝에딱 붙으므로 1rem을 더 준다.  */
+    background-color:#0af; color:#fff; font-weight:bold;}
+    /* color:#fff; 은 상단에 이미 글자에대한 기준을 주었기때문에 안되므로 .top_btn>a{color:inherit;} 을 
+    써서 위에있는것을 무시하고 바로상단의  내용을 사용하라고 해준다. */
+    .top_btn>a{color:inherit;}
+.recent_box{width:160px; height:400px; width:10rem; height:25rem; 
+    position:fixed; bottom:10.25rem; left:50%; margin-left:31rem; padding:1rem; 
+    background-color:#f27; color:#fff; z-index:300;}
+
